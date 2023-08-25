@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cPanel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="js/script4.js"></script>
+    <script src="js/script5.js"></script>
+    <style>
+         body { background-color: #def6ff; }
+         #colorCal{
+            background-color: #ffffff; 
+         }
+         .fundo-mod {
+            background-color: rgb(23, 162, 184);
+            
+            width: 100%;
+        }
+
+        .margem {
+            padding: 3%;
+            border-radius: 50px;
+            
+        }
+        .mismo-tamanio {
+            border-radius: 4px;
+        }
+
+        .display {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+        #visor{
+        font-family: 'Press Start 2P', cursive;
+        }
+        #result
+        {
+            font-family: 'Press Start 1P', cursive;
+        }
+        #historico{
+        font-family: 'Press Start 2P', cursive;
+        }
+        #titulo{
+        font-family: 'Lobster', cursive;
+        }
+        .borda{
+        -webkit-box-shadow: 0 3px 9px black;
+        box-shadow: 0 3px 9px black;
+        border-radius: 3px;
+        -webkit-transition: border .2s ease-in-out;
+        transition: border .2s ease-in-out;
+        }
+
+        .centro {
+        width:100%;
+        height:100%;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar w/ text</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+              </ul>
+              <span class="navbar-text">
+                Navbar text with an inline element
+              </span>
+            </div>
+          </nav>
+    </header>
+      
+    
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+                        </li>
+                        <hr>
+                        <!--
+                        <h1>calculadora</h1>
+                        <div class="container-fluid " id="colorCal">
+                            <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-primary btn-lg align-self-center"><i class="bi bi-7-square"></i></button>
+                                <button type="button" class="btn btn-primary btn-lg align-self-center"><i class="bi bi-8-square"></i></button>
+                                <button type="button" class="btn btn-primary btn-lg align-self-center"><i class="bi bi-9-square"></i></button>
+                                <button type="button" class="btn btn-info btn-lg align-self-center"><i class="bi bi-plus-lg"></i></button>
+                            </div>
+                            <br>
+                            <div class="d-flex justify-content-between">
+                                <div class="col"><button type="button" class="btn btn-primary btn-lg align-self-center"><i class="bi bi-7-square"></i></button></div>
+                                <div class="col"><button type="button" class="btn btn-primary btn-lg align-self-center"><i class="bi bi-7-square"></i></button></div>
+                                <div class="col"><button type="button" class="btn btn-primary btn-lg align-self-center"><i class="bi bi-7-square"></i></button></div>
+                                <div class="col"><button type="button" class="btn btn-primary btn-lg align-self-center"><i class="bi bi-7-square"></i></button></div>
+                            </div>
+                        </div>
+                        -->
+                        
+                        <!--
+                        <hr>
+                        <h1>CALCULADORA</h1>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-xs-12 col-sm-6 col-md-3 fundo-mod margem borda">
+                                    <div class="justify-content-center centro">
+                                        <table class="table">
+                                            <tr>
+                                                
+                                                <td colspan="4" ><div id="historico" onclick="mostrarHora();"></div></td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td colspan="4"><input type="text" name="visor" id="visor" class="col-xs-12 col-sm-12 col-md-12" onkeypress="myFunction(event)"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" id="botao7" value="7" class="btn btn-secondary mismo-tamanio" onclick="botao(value);"/></td>
+                                                <td><input type="button" id="botao8" value="8" class="btn btn-secondary mismo-tamanio" onclick="botao(value);"/></td>
+                                                <td><input type="button" id="botao9" value="9" class="btn btn-secondary mismo-tamanio" onclick="botao(value);"/></td>
+                                                <td><input type="button" id="botao/" value="/" class="btn btn-info mismo-tamanio" onclick="btn_divide(value);" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" id="botao4" value="4" class="btn btn-secondary mismo-tamanio" onclick="botao(value);"/></td>
+                                                <td><input type="button" id="botao5" value="5" class="btn btn-secondary mismo-tamanio" onclick="botao(value);"/></td>
+                                                <td><input type="button" id="botao6" value="6" class="btn btn-secondary mismo-tamanio" onclick="botao(value);"/></td>
+                                                <td><input type="button" id="botao*" value="*" class="btn btn-info mismo-tamanio" onclick="btn_multiplica(value);"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" id="botao1" value="1" class="btn btn-secondary mismo-tamanio" onclick="botao(value);"/></td>
+                                                <td><input type="button" id="botao2" value="2" class="btn btn-secondary mismo-tamanio" onclick="botao(value);"/></td>
+                                                <td><input type="button" id="botao3" value="3" class="btn btn-secondary mismo-tamanio" onclick="botao(value);"/></td>
+                                                <td><input type="button" id="botao-" value="-" class="btn btn-info mismo-tamanio" onclick="btn_subtrai(value);" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" id="botao0" value="0" class="btn btn-secondary mesmo-tamanho" onclick="botao(value);"/></td>
+                                                <td><input type="button" id="botao=" value="=" class="btn btn-info mismo-tamanio" onclick="btn_igual(value);"/></td>
+                                                <td><input type="button" id="botaoC" value="C" class="btn btn-danger mismo-tamanio" onclick="reset(value);"/></td>
+                                                <td><input type="button" id="soma" value="+" class="btn btn-info mismo-tamanio" onclick="btn_soma(value);"/></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p id="demo"></p>
+                        <p>The keyCode property is deprecated, use the key property instead.</p>
+                        -->
+                        <!--segunda calculadora colspan="4"-->
+                        <hr>
+                        <h1>Calculadora</h1>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fundo-mod margem borda">
+                                    <div class="centro">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <td colspan="4">
+                                                    <input type="text" id="result" name="visor" class="form-control" onkeypress="teclear(event)" />
+                                                </td>
+                                            </tr>
+                                            <hr>
+                                            <tr>
+                                                <td> </td>
+                                                <td> </td>
+                                                <td> </td>
+                                                <td>
+                                                    <input type="button" id="btn_limpiar" value="C" onclick="clearScreen()" class="btn btn-danger" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" value="7" class="btn btn-secondary mismo-tamanio" onclick="display('7')" /></td>
+                                                <td><input type="button" value="8" class="btn btn-secondary mismo-tamanio" onclick="display('8')" /></td>
+                                                <td><input type="button" value="9" class="btn btn-secondary mismo-tamanio" onclick="display('9')" /></td>
+                                                <td><input type="button" value="/" class="operator btn btn-info mismo-tamanio" onclick="display('/')" /></td>
+
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td><input type="button" value="4" class="btn btn-secondary mismo-tamanio" onclick="display('4')" /></td>
+                                                <td><input type="button" value="5" class="btn btn-secondary mismo-tamanio" onclick="display('5')" /></td>
+                                                <td><input type="button" value="6" class="btn btn-secondary mismo-tamanio" onclick="display('6')" /></td>
+                                                <td><input type="button" value="*" class="operator btn btn-info mismo-tamanio" onclick="display('*')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" value="1" class="btn btn-secondary mismo-tamanio" onclick="display('1')" /></td>
+                                                <td><input type="button" value="2" class="btn btn-secondary mismo-tamanio" onclick="display('2')" /></td>
+                                                <td><input type="button" value="3" class="btn btn-secondary mismo-tamanio" onclick="display('3')" /></td>
+                                                <td><input type="button" value="-" class="operator btn btn-info mismo-tamanio" onclick="display('-')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" value="0" class="btn btn-secondary mismo-tamanio" onclick="display('0')" /></td>
+                                                <td><input type="button" value="." class="operator btn btn-info mismo-tamanio" onclick="display('.')" /></td>
+                                                <td><input type="button" id="btn_igual" value="=" class="btn btn btn-info mismo-tamanio" onclick="solve()" /></td>
+                                                <td><input type="button" value="+" class="operator btn btn-info mismo-tamanio" onclick="display('+')" /></td>
+
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </ul>
+                    
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">loser</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col py-3">
+                <h3>cPanel</h3>
+                
+                <div class="jumbotron">
+                    <h1 class="display-4">cPanel</h1>
+                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <hr class="my-4">
+                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                </div>
+                    <hr class="my-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nemo quo animi ut exercitationem rerum nihil quae rem debitis officia. Dicta incidunt dolor doloremque in explicabo mollitia cum harum aliquid?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, repudiandae. Necessitatibus neque ad laboriosam esse sequi sed, culpa itaque! Atque reprehenderit itaque numquam cumque, vitae soluta officia sunt natus commodi.</p>
+                        <img src="https://png.pngtree.com/background/20210711/original/pngtree-simple-technology-business-black-electronic-banner-picture-image_1078086.jpg" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="...">
+                    <hr class="my-4">
+                <h1>DOMAINS</h1>
+                <br>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-primary" ><i class="bi bi-airplane"></i> SITE PUBLISHER</button>
+                        <button type="button" class="btn btn-primary"><i class="bi bi-plus"></i> ADDON DOMAINS</button>
+                        <button type="button" class="btn btn-primary"><i class="bi bi-subtract"></i> SUBDOMAINS</button>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-primary"><i class="bi bi-globe"></i> ALIASES</button>
+                        <button type="button" class="btn btn-primary"><i class="bi bi-arrow-clockwise"></i> REDIRECTS</button>
+                        <button type="button" class="btn btn-primary"><i class="bi bi-grip-horizontal"></i> SIMPLE ZONE EDITOR</button>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-primary"><i class="bi bi-grip-horizontal"></i> ZONE EDITOR</button>
+                    </div>
+                <hr class="my-4">
+                <h1>DATABASES</h1>
+                <br>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-primary"><i class="bi bi-filetype-php"></i> PHP MY ADMIN</button>
+                        <button type="button" class="btn btn-primary"><i class="bi bi-filetype-sql"></i> MYSQL DATABASES</button>
+                        <button type="button" class="btn btn-primary"><i class="bi bi-clock"></i> SWIZARDS</button>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-primary"><i class="bi bi-wifi"></i> REMOTE</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+
+
+  
+
+
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
