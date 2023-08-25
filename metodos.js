@@ -1,4 +1,4 @@
-class miClase
+class MiClase
 {
     constructor(primero,segundo)
     {
@@ -16,8 +16,9 @@ class miClase
     };
     escribir()
     {
-        document.write(this.primero);
-        document.write(this.segundo);
+        console.log(this.primero);
+        console.log(this.segundo);
+        alert("nombres");
     };
     miMetodoDos(dato1,dato2)
     {
@@ -26,4 +27,7 @@ class miClase
 
 };
 
-var objetoUno = new miClase("juanito",21212);
+let objetoUno = new MiClase("juanito", 21212);
+console.log(objetoUno.miMetodoUno());
+console.log(objetoUno.escribir());
+console.log(objetoUno.miMetodoDos("dato1aaa", "dato2bb"));
