@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>titulo 1</h1>
+    <div id="subtitulo"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis vero reiciendis voluptas nesciunt cumque fugit maxime, necessitatibus est neque magnam architecto quidem soluta totam laudantium mollitia quae placeat quis. Rerum?</p>
+
+    <script>
+        //1 crear elemento
+        var elemento = document.createElement("h2");
+        //2 crear un nodo de texto
+        var contenido = document.createTextNode("ESTE ES EL NUEVO TITULAR");
+        //3 añadir el nodo de texto al elemento
+        elemento.appendChild(contenido);
+        //4 agregar atributos al elemento
+        elemento.setAttribute("align","center");
+        //5 agregar el elemento al documento
+        document.getElementById("subtitulo").appendChild(elemento);
+    </script>
+</body>
+</html>
