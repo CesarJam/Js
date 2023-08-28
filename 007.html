@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">titulo 1</h1>
+    <p id="primero">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores optio beatae libero alias similique harum culpa fuga iusto deleniti accusantium ea laborum, minima sunt dolor. Saepe, asperiores. Hic, cupiditate necessitatibus?</p>
+    <p id="segundo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur autem sunt inventore ab quasi ipsa voluptates assumenda. Rerum cumque fuga delectus harum quasi, odio labore accusantium illum, quibusdam ullam dolorem.</p>
+    <!--
+        INTRODUCCION AL DOM
+        
+        Live reload enabled.
+        elementosP[0]
+        <p id=​"primero">​…​</p>​"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores optio beatae libero alias similique harum culpa fuga iusto deleniti accusantium ea laborum, minima sunt dolor. Saepe, asperiores. Hic, cupiditate necessitatibus?"</p>​
+        elementosP[1]
+        <p id=​"segundo">​…​</p>​"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur autem sunt inventore ab quasi ipsa voluptates assumenda. Rerum cumque fuga delectus harum quasi, odio labore accusantium illum, quibusdam ullam dolorem."</p>​
+        elementosP[1].innerHTML
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur autem sunt inventore ab quasi ipsa voluptates assumenda. Rerum cumque fuga delectus harum quasi, odio labore accusantium illum, quibusdam ullam dolorem.'
+        elementosP[1].te
+        undefined
+        elementosP[1].textContent
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur autem sunt inventore ab quasi ipsa voluptates assumenda. Rerum cumque fuga delectus harum quasi, odio labore accusantium illum, quibusdam ullam dolorem.'
+        elementosP[1].innerHTML = "o yea"
+        'o yea'
+    -->
+    <script>
+        var elementosP = document.getElementsByTagName("p");
+        var segundoParrafo = document.getElementById("segundo");
+        console.log(segundoParrafo);
+
+    </script>
+</body>
+</html>
