@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>AGREGANDO NODOS AL DOM</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint illum eaque laudantium corrupti sunt aperiam! Ullam quae maiores dignissimos iusto odio corporis veniam quo ratione omnis, sit incidunt totam rem!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum ipsum fugit accusamus sunt neque earum officiis tempore sit atque? Maxime deserunt, esse voluptatum rerum odit eaque suscipit sequi explicabo.</p>
+    <ol id="lista">
+        <li>elemento --</li>
+        <li>elemento --</li>
+    </ol>
+    <script>
+        var elemento = document.createElement("li");
+        var contenido= document.createTextNode("Texto nuevo");
+
+        elemento.appendChild(contenido);
+
+        //agregando el elemento al final del body
+        //document.body.appendChild(elemento);
+
+        //se agrega el tres a la lista
+        //var padre = document.getElementById("lista");
+        //padre.appendChild(elemento);
+
+        //se agrego en la posicion 1
+        var padre = document.getElementsByTagName("li")[0].parentNode;
+        var hijo = document.getElementsByTagName("li")[0];
+        padre.insertBefore(elemento, hijo);
+        //CAMBIAR EL INDICE EN LA POSICION SELCCIONADA Y ESTE SE RECORRE AUTOMATICAMENTE
+    </script>
+</body>
+</html>
