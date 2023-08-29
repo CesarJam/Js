@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .foo{
+            color: brown;
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>modificando, remplazando y eliminando nodos del dom</h1>
+    <ol>
+        <li id="primero">A -Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur dolore provident recusandae veritatis laborum hic iste ab magni deleniti rem. Dolore officiis adipisci in atque a commodi repellendus excepturi maxime.</li>
+        <li id="segundo">B Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsam consectetur rem ab aliquid sapiente natus, eius asperiores illum temporibus commodi impedit sed facilis sunt quidem, voluptatem repellat est ea.</li>
+        <li id="tercero">C Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel saepe natus recusandae sit repudiandae accusantium perspiciatis laudantium porro, nihil repellat asperiores voluptatum inventore officia omnis dolore mollitia earum officiis itaque?</li>
+    </ol>
+   <script>
+        
+        var primerElemento = document.getElementById("primero");
+        var segundoElemento = document.getElementById("segundo");
+        var tercerElemento = document.getElementById("tercero");
+        // SUSTITUYE EL VALOR DE 1
+        primerElemento.innerHTML="NUEVO TEXTO <i>CESAR JAM</i>";
+        // SUSTITUYE EL VALOR DE 1, PERO NO PASA LOS PARAMETROS HTML
+        segundoElemento.textContent = "NUEVO TEXTO <i>CESAR JAM</i>";
+        //SUSTITUYE EL VALOR DE 1 Y AGREGA PARAMETROS CSS
+        tercerElemento.innerHTML="NUEVO TEXTO <i class=\"foo\">CESAR JAM</i>";
+        
+        /*
+        var elemento = document.createElement("li"),
+        contenido = document.createTextNode("UEVO TEXTO");
+
+        elemento.appendChild("contenido");
+        */
+
+   </script> 
+</body>
+</html>
